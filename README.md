@@ -1,8 +1,8 @@
 <h1 align="center"> Vortex Manager@0.1.2-alpha </h1>
 
+
 <h2 align="center" style="color:yellow"> WARNING NOT READY FOR USE </h2>
 
-<br></br>
 
 ## ⚙ Setup
 
