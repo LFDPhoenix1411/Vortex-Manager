@@ -1,6 +1,5 @@
 const { getAllUsers, updateUser, deleteUser } = require("../assets/js/SQL.js");
-const { User } = require("../assets/js/class/user.js");
-
+const { User, removeUser } = require("../assets/js/class/user.js");
 
 // Fetch Users
 async function fetchUsers() {
@@ -14,9 +13,7 @@ async function fetchUsers() {
   }
   // Update Title Bar
   document.title = `Vortex Manager - ${userCount} User/s`;
-
 }
-
 
 // Fetch Cards
 fetchUsers();

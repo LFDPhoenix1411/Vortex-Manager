@@ -40,7 +40,7 @@ class User {
             <p class="card-text my-3">Balance : ${Balance}€</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button class="btn btn-primary me-md-2" disabled type="button">EDIT</button>
-            <button class="btn btn-danger"  type="button" onclick="document.getElementById('${ID}').remove();">DELETE</button>
+            <button class="btn btn-danger"  type="button" onclick="removeUser('${ID}')">DELETE</button>
             </div>
         </div>
         </div>
@@ -53,6 +53,11 @@ class User {
   }
 }
 
+async function removeUser(ID) {
+  document.getElementById(ID).remove();
+}
+
 module.exports = {
   User,
+  removeUser,
 };
