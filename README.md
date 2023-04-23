@@ -5,13 +5,12 @@ $${\color{yellow}WARNING\ \ NOT\ \ READY\ \ FOR\ \ USE}$$
 
 <br></br>
 
-## ⚙ Setup
+<h1 align="center"> ⚙ Setup </h1>
 
 ## Requirements :
 
-`
 MySQL server and NodeJS v20 is a prerequisite
-`
+
 
 ## Instructions :
 
