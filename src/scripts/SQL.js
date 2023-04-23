@@ -1,8 +1,6 @@
 const sql = require("mysql");
 require("dotenv").config();
 
-console.log(process.env)
-
 const config = {
   host: process.env.SQL_HOST,
   user: process.env.SQL_USER,
