@@ -14,15 +14,16 @@ $${\color{yellow}WARNING\ \ NOT\ \ READY\ \ FOR\ \ USE}$$
 
 
 ## Instructions :
-
-Setup is very easy, clone the repo, install dependencies by running `npm i`, and edit the `.env.example` file in the root directory to `.env`, and have it look something like this;
-
-```js
-SQL_HOST=127.0.0.1
-SQL_USER=root
-SQL_PASSWORD=password
-SQL_DATABASE=vortex
-```
+1. Clone the repository
+2. Install dependencies by running `npm i`
+3. Edit the `.env.example` file in the root directory to `.env`
+4. And have it look something like this : 
+  ```js
+  SQL_HOST=127.0.0.1
+  SQL_USER=root
+  SQL_PASSWORD=password
+  SQL_DATABASE=vortex
+  ```
 
 ## Setting up some SQL :
 
