@@ -1,5 +1,7 @@
 const sql = require("mysql");
-require('dotenv').config()
+require("dotenv").config();
+
+console.log(process.env)
 
 const config = {
   host: process.env.SQL_HOST,
@@ -36,7 +38,7 @@ async function updateUser(ID) {
 }
 
 async function deleteUser(ID) {
-  console.log(ID)
+  console.log(ID);
   // const connection = sql.createConnection(config);
 
   // return new Promise((resolve, reject) => {
