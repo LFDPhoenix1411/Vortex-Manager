@@ -36,19 +36,21 @@ async function updateUser(ID) {
 }
 
 async function deleteUser(ID) {
-  console.log(ID);
-  // const connection = sql.createConnection(config);
+  const connection = sql.createConnection(config);
 
-  // return new Promise((resolve, reject) => {
-  //   connection.query(`DELETE FROM users WHERE ID=${ID}`, (error, results, fields) => {
-  //     if (error) {
-  //       reject(error);
-  //     } else {
-  //       resolve(results);
-  //     }
-  //     connection.end();
-  //   });
-  // });
+  return new Promise((resolve, reject) => {
+    connection.query(
+      `DELETE FROM users WHERE ID=${ID}`,
+      (error, results, fields) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(results);
+        }
+        connection.end();
+      }
+    );
+  });
 }
 
 module.exports = {
