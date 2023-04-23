@@ -9,7 +9,8 @@ $${\color{yellow}WARNING\ \ NOT\ \ READY\ \ FOR\ \ USE}$$
 
 ## Requirements :
 
-MySQL server and NodeJS v20 is a prerequisite
+- MySQL server
+- NodeJS v20
 
 
 ## Instructions :
