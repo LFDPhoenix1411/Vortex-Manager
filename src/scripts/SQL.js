@@ -1,10 +1,11 @@
 const sql = require("mysql");
+require('dotenv').config()
 
 const config = {
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "test",
+  host: process.env.SQL_HOST,
+  user: process.env.SQL_USER,
+  password: process.env.SQL_PASSWORD,
+  database: process.env.SQL_DATABASE,
 };
 
 async function getAllUsers() {
