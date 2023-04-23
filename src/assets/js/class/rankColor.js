@@ -18,9 +18,6 @@ class rankColor {
       case "Support":
         return "primary";
 
-      case "Hit":
-        return "danger";
-
       // DEFAULT COLOR IF IT DOSENT EXISTS
       default:
         return "secondary";
