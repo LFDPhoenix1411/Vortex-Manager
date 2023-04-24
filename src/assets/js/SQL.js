@@ -1,6 +1,11 @@
 const sql = require("mysql");
 require("dotenv").config();
 
+const dataType = {
+  user: "users",
+  ticket: "tickets",
+};
+
 const config = {
   host: process.env.SQL_HOST,
   user: process.env.SQL_USER,
@@ -8,11 +13,11 @@ const config = {
   database: process.env.SQL_DATABASE,
 };
 
-async function getAllUsers() {
+async function getAllData(dataType = "users") {
   const connection = sql.createConnection(config);
 
   return new Promise((resolve, reject) => {
-    connection.query("SELECT * FROM users", (error, results, fields) => {
+    connection.query(`SELECT * FROM ${dataType}`, (error, results, fields) => {
       if (error) {
         reject(error);
       } else {
@@ -25,7 +30,7 @@ async function getAllUsers() {
   });
 }
 
-async function deleteUser(ID) {
+async function deleteData(ID) {
   const connection = sql.createConnection(config);
 
   return new Promise((resolve, reject) => {
@@ -43,7 +48,11 @@ async function deleteUser(ID) {
   });
 }
 
-module.exports = {
-  getAllUsers,
-};
+async function updateData() {}
 
+module.exports = {
+  dataType,
+  getAllData,
+  deleteData,
+  updateData,
+};

@@ -1,10 +1,10 @@
-const { getAllUsers } = require("../assets/js/SQL.js");
+const { dataType, getAllData, deleteData, updateData } = require("../assets/js/SQL.js");
 const { addUser, removeUser } = require("../assets/js/class/user.js");
 
 // Fetch Users
 async function fetchUsers() {
   // Get All Users
-  const { users, userCount } = await getAllUsers();
+  const { users, userCount } = await getAllData(dataType.user);
 
   // Add The Cards in a Loop
   for (let i = 0; i < userCount; i++) {
