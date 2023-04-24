@@ -1,4 +1,4 @@
-<h1 align="center"> Vortex Manager@0.1.2-alpha </h1>
+<h1 align="center"> Vortex Manager@0.1.6-alpha </h1>
 
 
 $${\color{yellow}WARNING\ \ NOT\ \ READY\ \ FOR\ \ USE}$$
@@ -10,7 +10,7 @@ $${\color{yellow}WARNING\ \ NOT\ \ READY\ \ FOR\ \ USE}$$
 ## Requirements :
 
 - MySQL server
-- NodeJS v20
+- NodeJS v18
 
 
 ## Instructions :
