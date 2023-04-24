@@ -17,16 +17,19 @@ async function getData(ID, dataType = "users") {
   const connection = sql.createConnection(config);
 
   return new Promise((resolve, reject) => {
-    connection.query(`SELECT * FROM ${dataType} WHERE ID=${ID}`, (error, results, fields) => {
-      if (error) {
-        reject(error);
-      } else {
-        const users = results;
-        const userCount = results.length;
-        resolve({ users, userCount });
+    connection.query(
+      `SELECT * FROM ${dataType} WHERE ID=${ID}`,
+      (error, results, fields) => {
+        if (error) {
+          reject(error);
+        } else {
+          const users = results;
+          const userCount = results.length;
+          resolve({ users, userCount });
+        }
+        connection.end();
       }
-      connection.end();
-    });
+    );
   });
 }
 
