@@ -36,17 +36,20 @@
               style="height: 30px; width: auto;"
             />
           </a>
+          <a>
+            <h4 style="margin: 0;">Welcome to Vortex Manager</h4>
+          </a>
           <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
@@ -70,28 +73,48 @@
     </header>
 
     <!-- Welcome popup -->
-    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div
+      class="modal fade"
+      id="infoPopup"
+      tabindex="-1"
+      aria-labelledby="welcomeModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="welcomeModalLabel">Welcome to Vortex Manager!</h5>
+            <h5 class="modal-title" id="welcomeModalLabel">
+              Welcome to Vortex Manager!
+            </h5>
           </div>
           <div class="modal-body">
             <p>Thank you for downloading the manager.</p>
-            <p>This manager is in early alpha, so it will be very unstable to use.</p> 
+            <p>
+              This manager is in early alpha, so it will be very unstable to
+              use.
+            </p>
           </div>
           <div class="modal-footer">
-            <button id="closeBtn" type="button" class="btn btn-danger" data-bs-dismiss="modal">Understand</button>
+            <button
+              id="closeBtn"
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Understand
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <main>
-      <section class="container mt-5">
-        <h1 id="Welcome">Welcome to Vortex Manager</h1>
+    <main>
+      <section id="WelcomeTab" class="container mt-5"></section>
+        
 
-      </section>
-    </main> -->
+
+      <section id="UpdateTab" class="container mt-5"></section>
+    </main>
   </body>
 </html>
