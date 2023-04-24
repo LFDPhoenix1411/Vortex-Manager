@@ -1,4 +1,4 @@
-const { rankColor } = require("./rankColor");
+const { rankColor } = require("../class/rankColor");
 
 async function addUser(
   ID,

@@ -20,7 +20,7 @@ const createWindow = () => {
     },
   });
 
-  mainWindow.loadFile(path.join(__dirname, 'public/Main.html'));
+  mainWindow.loadFile(path.join(__dirname, 'public/Home.html'));
 
   // mainWindow.webContents.openDevTools();
 };

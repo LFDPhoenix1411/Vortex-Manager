@@ -1,5 +1,5 @@
 const { dataType, getAllData, deleteData, updateData } = require("../assets/js/SQL.js");
-const { addUser, removeUser } = require("../assets/js/class/user.js");
+const { addUser, removeUser } = require("../assets/js/module/user.js");
 
 // Fetch Users
 async function fetchUsers() {
