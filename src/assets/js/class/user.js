@@ -1,28 +1,17 @@
 const { rankColor } = require("./rankColor");
 
-class User {
-  constructor(
-    ID,
-    Name,
-    Balance,
-    Rank = "User",
-    Image = "../assets/img/default.png"
-  ) {
-    this.ID = ID;
-    this.Name = Name;
-    this.Balance = Balance;
-    this.Rank = Rank;
-    this.Image = Image;
+async function addUser(
+  ID,
+  Name,
+  Balance,
+  Rank = "User",
+  Image = "../assets/img/default.png"
+) {
+  const cards = document.getElementById("Card");
 
-    this.init(ID, Name, Balance, Rank, Image);
-  }
-
-  async init(ID, Name, Balance, Rank, Image) {
-    const cards = document.getElementById("Card");
-
-    // Create A Card
-    const card = document.createElement("div");
-    card.innerHTML = `
+  // Create A Card
+  const card = document.createElement("div");
+  card.innerHTML = `
     <div class="container my-3">
     <div class="card mb-3 bg-dark text-white">
     <div class="row g-0">
@@ -48,9 +37,8 @@ class User {
     </div>
     </div>
     `;
-    card.setAttribute("id", ID);
-    cards.appendChild(card);
-  }
+  card.setAttribute("id", ID);
+  cards.appendChild(card);
 }
 
 async function removeUser(ID) {
@@ -58,6 +46,6 @@ async function removeUser(ID) {
 }
 
 module.exports = {
-  User,
+  addUser,
   removeUser,
 };

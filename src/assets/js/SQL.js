@@ -25,16 +25,6 @@ async function getAllUsers() {
   });
 }
 
-async function updateUser(ID) {
-  // try {
-  //   const result = await updateUser(ID, updatedData);
-  //   console.log(`User with ID ${ID} has been updated successfully.`);
-  //   return result;
-  // } catch (error) {
-  //   console.error(`Error updating user with ID ${ID}: ${error}`);
-  // }
-}
-
 async function deleteUser(ID) {
   const connection = sql.createConnection(config);
 
@@ -55,7 +45,5 @@ async function deleteUser(ID) {
 
 module.exports = {
   getAllUsers,
-  updateUser,
-  deleteUser,
 };
 
