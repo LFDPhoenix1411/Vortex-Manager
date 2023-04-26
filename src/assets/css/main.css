@@ -2,10 +2,6 @@
   vertical-align: middle;
 }
 
-.modal-content {
-  background-color: #383838;
-}
-
 .modal-body {
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */

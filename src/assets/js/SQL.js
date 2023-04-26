@@ -86,9 +86,28 @@ async function updateData(ID, Data, dataType) {
   });
 }
 
+async function getCount(dataType = "users") {
+  const connection = sql.createConnection(config);
+
+  return new Promise((resolve, reject) => {
+    connection.query(
+      `SELECT COUNT(*) FROM ${dataType}`,
+      (error, results, fields) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(results[0]["COUNT(*)"]);
+        }
+        connection.end();
+      }
+    );
+  });
+}
+
 module.exports = {
   dataType,
   getAllData,
   deleteData,
   updateData,
+  getCount,
 };

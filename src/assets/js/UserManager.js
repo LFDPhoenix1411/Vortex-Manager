@@ -1,4 +1,9 @@
-const { dataType, getAllData, deleteData, updateData } = require("../assets/js/SQL.js");
+const {
+  dataType,
+  getAllData,
+  deleteData,
+  updateData,
+} = require("../assets/js/SQL.js");
 const { addUser, removeUser } = require("../assets/js/module/user.js");
 
 // Fetch Users
@@ -9,7 +14,13 @@ async function fetchUsers() {
   // Add The Cards in a Loop
   for (let i = 0; i < userCount; i++) {
     const user = users[i];
+
     addUser(user.ID, user.NAME, user.BALANCE, user.RANK, user.IMAGE_URL);
+    addUser("1", "1", "1", "1");
+    addUser("2", "2", "2", "2");
+    addUser("3", "3", "3", "3");
+    addUser("4", "4", "4", "4");
+    addUser("5", "5", "5", "5");
   }
   // Update Title Bar
   document.title = `Vortex Manager - ${userCount} User/s`;
